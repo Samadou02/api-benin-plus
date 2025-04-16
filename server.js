@@ -15,6 +15,6 @@ app.use('/api/sites', sitesRoutes);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ Connecté à MongoDB');
-    app.listen(3000, () => console.log('🚀 Serveur lancé sur http://localhost:3000'));
+    app.listen(3000, () => console.log('Serveur lancé sur http://localhost:3000'));
   })
   .catch(err => console.error('❌ Erreur MongoDB :', err));
