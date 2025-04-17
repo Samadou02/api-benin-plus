@@ -1,4 +1,4 @@
-const Site = require('../models/SiteTouristique');
+const Site = require('../models/siteTouristique');
 
 exports.getSites = async (req, res) => {
   try {
