@@ -15,6 +15,18 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Middleware
 app.use(cors());
 app.use(express.json());
+ 
+//Route principale
+app.get('/', (req, res) => {
+  res.json({
+    message: "Bienvenue sur l'API Bénin Plus",
+    availableRoutes: {
+      villes: '/api/villes',
+      sites: '/api/sites',
+      docs: '/api-docs'  // Lien vers la documentation Swagger
+    }
+  });
+});
 
 // Routes
 app.use('/api/villes', villesRoutes);
